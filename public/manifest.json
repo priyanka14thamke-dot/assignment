@@ -1,0 +1,16 @@
+{
+  "short_name": "Gutenberg Project",
+  "name": "Gutenberg Project - Free Books Library",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7c3aed",
+  "background_color": "#ffffff",
+  "description": "A social cataloging website that allows you to freely search its database of books, annotations, and reviews."
+}
