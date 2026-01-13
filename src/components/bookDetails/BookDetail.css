@@ -1,0 +1,273 @@
+.book-detail-container {
+  /* min-height: 100vh; */
+  background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%);
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-detail-header {
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  /* background: white; */
+  /* border-radius: 50%; */
+  cursor: pointer;
+  font-size: 2.25rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  color: #374151;
+  color: #5e56e7;
+  font-weight: 800;
+  background: transparent;
+  /* margin: 0 auto; */
+}
+
+.back-button:hover {
+  color: #5e56e7;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.book-detail-content {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.book-cover-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-cover-large {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.book-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  /* margin-top: 23px; */
+  text-align: left;
+}
+
+.book-title-large {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  font-size: 30px;
+}
+
+.book-authors {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+
+.author-name {
+  font-size: 20px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.author-years {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.book-metadata {
+  display: table;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.metadata-item {
+  display: table-row;
+  font-size: 18px;
+}
+
+.metadata-item::before,
+.metadata-item::after {
+  content: '';
+  display: table-cell;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.metadata-item::before {
+  content: attr(data-label);
+  font-weight: 500;
+  color: #374151;
+  width: 120px;
+}
+
+.metadata-item::after {
+  content: attr(data-value);
+  color: #6b7280;
+}
+
+.download-section {
+  /* margin-bottom: 2rem; */
+}
+
+.download-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.download-button {
+  padding: 0.5rem 1.5rem;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+}
+
+.subjects-section,
+.bookshelves-section {
+  margin-bottom: 2rem;
+}
+
+.subjects-section h3,
+.bookshelves-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.75rem 0;
+}
+
+.subjects-list,
+.bookshelves-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subject-item,
+.bookshelf-item {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.error {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .book-detail-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .book-info-section{
+    text-align: center;
+  }
+
+  .book-authors {
+    font-size: 30px;
+  }
+  .book-cover-section {
+    order: -1;
+  }
+      .book-metadata {
+        padding: 0px !important;
+        font-size:20px;
+    }
+
+  .book-title-large {
+    font-size: 30px;
+  }
+
+  .book-metadata {
+    padding: 1rem;
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+  }
+.download-section {
+    margin-top: 40px;
+}
+  .download-buttons {
+    justify-content: center;
+  }
+  .author-years{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-detail-container {
+    padding: 0.75rem;
+  }
+
+  .book-title-large {
+    font-size: 1.75rem;
+  }
+
+  .metadata-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+  }
+
+  .download-button {
+    justify-content: center;
+  }
+}
